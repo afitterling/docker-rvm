@@ -7,8 +7,15 @@ ARG GROUP=work
 
 # ESSENTIAL
 RUN apt-get update -q && \
-    apt-get install -qy npm nodejs python3 python3-wheel python3-cairo pkg-config python3-setuptools python3-dev python3-pip build-essential man telnet bash less zsh tmux vim vim-doc \
-    --no-install-recommends \
+    apt-get install -qy --no-install-recommends \
+    npm nodejs \
+    python3 \
+    iputils-ping \
+    python3-cairo python3-wheel \
+    python3-setuptools python3-dev \
+    python3-pip build-essential \
+    vim git curl \
+    zsh \
      && apt-get clean
 
 # secure the apps
